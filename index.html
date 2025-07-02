@@ -1,10 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Coming Soon</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OutsetWorks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .logo-color {
+            color: #FF6A00; /* Orange color from the logo */
+        }
+    </style>
 </head>
-<body>
-  <h1>Website Coming Soon.</h1>
+<body class="bg-[#0F0F0E] text-white font-sans flex flex-col min-h-screen"> <!-- Added flex and min-h-screen for layout -->
+    <header class="flex justify-between items-center p-6">
+        <div class="flex items-center">
+            <img src="images/logo.png" alt="OutsetWorks Logo" class="h-16 w-auto"> <!-- Maintains aspect ratio -->
+        </div>
+        <nav>
+            <a href="/books" class="text-white hover:underline">Books</a>
+        </nav>
+    </header>
+    <main class="flex flex-col items-center justify-center flex-grow"> <!-- Added flex-grow to main -->
+        <h1 class="text-4xl font-bold logo-color">Website Coming Soon</h1>
+        <p class="text-lg mt-4 text-gray-400">Stay tuned for updates!</p>
+    </main>
+    <footer class="text-center p-4 text-gray-500">
+        <div class="flex justify-center items-center space-x-4">
+            <img src="images/icon.png" alt="Icon" class="h-6 w-6">
+            <span>&copy; 2025 OutsetWorks. All rights reserved.</span>
+        </div>
+    </footer>
 </body>
 </html>
