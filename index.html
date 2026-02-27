@@ -16,7 +16,20 @@
     <main class="flex flex-col items-center justify-center flex-grow">
         <img src="images/logo.png" alt="OutsetWorks Logo" class="h-16 w-auto mb-4">
         <p class="text-lg text-gray-400">Technology strategy, delivery, and leadership.</p>
-        <a href="mailto:sam@outsetworks.com" class="mt-4 text-sm logo-color hover:opacity-80 transition-opacity">sam@outsetworks.com</a>
+        <a class="email-hidden mt-4 text-sm logo-color hover:opacity-80 transition-opacity" href="#" data-email="c2FtQG91dHNldHdvcmtzLmNvbQ==">[email&#8209;protected]</a>
     </main>
+    <script>
+        const emailtag = document.querySelector('.email-hidden');
+        let observer = new IntersectionObserver((entries) => {
+            entries.map((entry) => {
+                if (entry.isIntersecting) {
+                    let script = document.createElement('script');
+                    script.onload = function () { emaildecode(entry.target); };
+                    script.src = 'decode-email.js';
+                    document.head.appendChild(script);
+                }
+            });
+        }).observe(emailtag);
+    </script>
 </body>
 </html>
